@@ -29,7 +29,7 @@ function getUsersOption() {
     hasSpecialCase: window.confirm("Confirm your password will have at least one special character."),
   }
   // if it doesn't match parameters then start again.
-  if (option.hasUpperCase === false && option.hasLowerCase === false && option.hasNumber === false && option.hasSpecialChar === false) 
+  if (option.hasUpperCase === false && option.hasLowerCase === false && option.hasNumCase === false && option.hasSpecialCase === false) 
   {
     window.alert("Uh-oh! Your password needs meet the parameters.");
     return getUsersOption();
@@ -44,12 +44,12 @@ function getUsersOption() {
   }
 
   // Check Number
-  if (option.hasNumber) {
+  if (option.hasNumCase) {
     option.combineArray = option.combineArray.concat(numCase);
   }
 
   // Check Special
-  if (option.hasSpecialChar) 
+  if (option.hasSpecialCase) 
   {
     option.combineArray = option.combineArray.concat(specialCase);
   }
